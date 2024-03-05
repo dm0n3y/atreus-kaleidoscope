@@ -104,7 +104,7 @@ KEYMAPS(
   [NAV] = KEYMAP_STACKED
   (
        ___       ,Key_Mute      ,Key_VolDn     ,Key_VolUp     ,Key_BrightUp
-      ,OS_CTL    ,OS_ALT        ,OS_CMD        ,OS_SFT        ,Key_BrightDn
+      ,OS_SFT    ,OS_CTL        ,OS_ALT        ,OS_CMD        ,Key_BrightDn
       ,Key_Stop  ,Key_PrevTrack ,Key_PlayPause ,Key_NextTrack ,Key_Sleep    ,___
       ,___       ,___           ,___           ,___           ,___          ,___
 
@@ -122,17 +122,17 @@ KEYMAPS(
       ,___       ,___            ,___           ,Key_Esc              ,Key_Space             ,Key_Tab
 
                 ,Key_Dollar  ,Key_Hash  ,Key_At   ,Key_Exclamation ,Key_Backtick
-                ,Key_Percent ,OS_SFT    ,OS_CMD   ,OS_ALT          ,OS_CTL
+                ,Key_Percent ,OS_CMD    ,OS_ALT   ,OS_CTL          ,OS_SFT
       ,___      ,Key_Caret   ,Key_And   ,Key_Star ,Key_Plus        ,Key_Quote
       ,___      ,___         ,___       ,___      ,___             ,___
    ),
 
    [NUM] = KEYMAP_STACKED
    (
-       ___ ,___ ,___ ,___ ,___
-      ,___ ,___ ,___ ,___ ,___
-      ,___ ,___ ,___ ,___ ,___ ,___
-      ,___ ,___ ,___ ,___ ,___ ,___
+       ___    ,___    ,___    ,___    ,___
+      ,OS_SFT ,OS_CTL ,OS_ALT ,OS_CMD ,___
+      ,___    ,___    ,___    ,___    ,___ ,___
+      ,___    ,___    ,___    ,___    ,___ ,___
 
                   ,Key_Delete    ,Key_7      ,Key_8   ,Key_9  ,___
                   ,Key_Backspace ,Key_4      ,Key_5   ,Key_6  ,___
