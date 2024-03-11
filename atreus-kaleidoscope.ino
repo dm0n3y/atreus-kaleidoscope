@@ -22,6 +22,7 @@
 #endif
 
 #include "Kaleidoscope.h"
+#include "Kaleidoscope-CharShift.h"
 #include "Kaleidoscope-EEPROM-Settings.h"
 #include "Kaleidoscope-EEPROM-Keymap.h"
 #include "Kaleidoscope-Escape-OneShot.h"
@@ -95,10 +96,10 @@ KEYMAPS(
       ,Key_Z ,Key_X ,Key_C ,Key_V          ,Key_B         ,___
       ,___   ,___   ,___   ,LT(NUM,Escape) ,LT(NAV,Space) ,SFT_T(Tab)
 
-                     ,Key_Y             ,Key_U      ,Key_I     ,Key_O      ,Key_P
-                     ,Key_H             ,Key_J      ,Key_K     ,Key_L      ,Key_Semicolon
-       ,___          ,Key_N             ,Key_M      ,Key_Comma ,Key_Period ,Key_Question
-       ,SFT_T(Enter) ,LT(SYM,Backspace) ,Key_Delete ,___       ,___        ,___
+                     ,Key_Y             ,Key_U      ,Key_I  ,Key_O  ,Key_P
+                     ,Key_H             ,Key_J      ,Key_K  ,Key_L  ,Key_Semicolon
+       ,___          ,Key_N             ,Key_M      ,CS(0)  ,CS(1)  ,CS(2)
+       ,SFT_T(Enter) ,LT(SYM,Backspace) ,Key_Delete ,___    ,___    ,___
   ),
 
   [NAV] = KEYMAP_STACKED
@@ -116,15 +117,15 @@ KEYMAPS(
 
   [SYM] = KEYMAP_STACKED
   (
-       Key_Slash ,Key_Pipe       ,Key_Backslash ,Key_LeftCurlyBracket ,Key_RightCurlyBracket
-      ,Key_Lt    ,Key_Eq         ,Key_Gt        ,Key_LeftParen        ,Key_RightParen
-      ,Key_Tilde ,Key_Underscore ,Key_Minus     ,Key_LeftBracket      ,Key_RightBracket      ,___
-      ,___       ,___            ,___           ,Key_Esc              ,Key_Space             ,Key_Tab
+       ___     ,Key_Hash    ,Key_Slash     ,Key_LeftCurlyBracket ,Key_RightCurlyBracket
+      ,Key_At  ,Key_Dollar  ,Key_Pipe      ,Key_LeftParen        ,Key_RightParen
+      ,Key_And ,Key_Percent ,Key_Backslash ,Key_LeftBracket      ,Key_RightBracket      ,___
+      ,___     ,___         ,___           ,Key_Esc              ,Key_Space             ,Key_Tab
 
-                ,Key_Dollar  ,Key_Hash  ,Key_At   ,Key_Exclamation ,Key_Backtick
-                ,Key_Percent ,OS_CMD    ,OS_ALT   ,OS_CTL          ,OS_SFT
-      ,___      ,Key_Caret   ,Key_And   ,Key_Star ,Key_Plus        ,Key_Quote
-      ,___      ,___         ,___       ,___      ,___             ,___
+                ,Key_Tilde    ,Key_Lt   ,Key_Eq   ,Key_Gt    ,___
+                ,Key_Backtick ,OS_CMD   ,OS_ALT   ,OS_CTL    ,OS_SFT
+      ,___      ,Key_Caret    ,Key_Star ,Key_Plus ,Key_Minus ,Key_Underscore
+      ,___      ,___          ,___      ,___      ,___       ,___
    ),
 
    [NUM] = KEYMAP_STACKED
@@ -144,6 +145,9 @@ KEYMAPS(
 // clang-format on
 
 KALEIDOSCOPE_INIT_PLUGINS(
+  // https://kaleidoscope.readthedocs.io/en/latest/plugins/Kaleidoscope-CharShift.html
+  CharShift,
+
   // ----------------------------------------------------------------------
   // Chrysalis plugins
 
@@ -184,7 +188,7 @@ KALEIDOSCOPE_INIT_PLUGINS(
   // SpaceCadet can turn your shifts into parens on tap, while keeping them as
   // Shifts when held. SpaceCadetConfig lets Chrysalis configure some aspects of
   // the plugin.
-  SpaceCadet,
+  // SpaceCadet,
   SpaceCadetConfig,
 
   // Enables the "Sticky" behavior for modifiers, and the "Layer shift when
@@ -229,6 +233,13 @@ const macro_t *macroAction(uint8_t macro_id, KeyEvent &event) {
 }
 
 void setup() {
+  // https://kaleidoscope.readthedocs.io/en/latest/examples/Keystrokes/CharShift/CharShift.ino.html
+  CS_KEYS(
+    kaleidoscope::plugin::CharShift::KeyPair(Key_Comma, Key_Quote),
+    kaleidoscope::plugin::CharShift::KeyPair(Key_Period, LSHIFT(Key_Quote)),
+    kaleidoscope::plugin::CharShift::KeyPair(Key_Question, Key_Exclamation),
+  );
+
   Kaleidoscope.setup();
   EEPROMKeymap.setup(9);
 
