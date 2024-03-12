@@ -77,13 +77,14 @@ enum {
 #define Key_VolUp       Consumer_VolumeIncrement
 #define Key_VolDn       Consumer_VolumeDecrement
 
-#define M_Home LCTRL(Key_A)
-#define M_End  LCTRL(Key_E)
-#define M_Undo LGUI(Key_Z)
-#define M_Redo LGUI(LSHIFT(Key_Z))
-#define M_Cut  LGUI(Key_X)
-#define M_Copy LGUI(Key_C)
+#define M_Home  LCTRL(Key_A)
+#define M_End   LCTRL(Key_E)
+#define M_Undo  LGUI(Key_Z)
+#define M_Redo  LGUI(LSHIFT(Key_Z))
+#define M_Cut   LGUI(Key_X)
+#define M_Copy  LGUI(Key_C)
 #define M_Paste LGUI(Key_V)
+#define M_Lock  LGUI(LCTRL(Key_Q))
 
 enum { BASE, NAV, SYM, NUM };
 
@@ -106,7 +107,7 @@ KEYMAPS(
   (
        ___       ,Key_Mute      ,Key_VolDn     ,Key_VolUp     ,Key_BrightUp
       ,OS_SFT    ,OS_CTL        ,OS_ALT        ,OS_CMD        ,Key_BrightDn
-      ,Key_Stop  ,Key_PrevTrack ,Key_PlayPause ,Key_NextTrack ,Key_Sleep    ,___
+      ,Key_Stop  ,Key_PrevTrack ,Key_PlayPause ,Key_NextTrack ,M_Lock       ,___
       ,___       ,___           ,___           ,___           ,___          ,___
 
                  ,Key_PageUp    ,M_Undo        ,Key_UpArrow   ,M_Redo         ,___
