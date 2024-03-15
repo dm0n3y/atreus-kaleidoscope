@@ -118,15 +118,15 @@ KEYMAPS(
 
   [SYM] = KEYMAP_STACKED
   (
-       ___     ,Key_Hash    ,Key_Slash     ,Key_LeftCurlyBracket ,Key_RightCurlyBracket
-      ,Key_At  ,Key_Dollar  ,Key_Pipe      ,Key_LeftParen        ,Key_RightParen
-      ,Key_And ,Key_Percent ,Key_Backslash ,Key_LeftBracket      ,Key_RightBracket      ,___
-      ,___     ,___         ,___           ,Key_Esc              ,Key_Space             ,Key_Tab
+       ___          ,Key_Star       ,Key_Plus      ,Key_LeftCurlyBracket ,Key_RightCurlyBracket
+      ,Key_Tilde    ,Key_Underscore ,Key_Minus     ,Key_LeftParen        ,Key_RightParen
+      ,Key_Backtick ,Key_Slash      ,Key_Backslash ,Key_LeftBracket      ,Key_RightBracket  ,___
+      ,___          ,___            ,___           ,Key_Esc              ,Key_Space         ,Key_Tab
 
-                ,Key_Tilde    ,Key_Lt   ,Key_Eq   ,Key_Gt    ,___
-                ,Key_Backtick ,OS_CMD   ,OS_ALT   ,OS_CTL    ,OS_SFT
-      ,___      ,Key_Caret    ,Key_Star ,Key_Plus ,Key_Minus ,Key_Underscore
-      ,___      ,___          ,___      ,___      ,___       ,___
+            ,Key_And  ,Key_Lt   ,Key_Eq     ,Key_Gt      ,___
+            ,Key_Pipe ,OS_CMD   ,OS_ALT     ,OS_CTL      ,OS_SFT
+      ,___  ,Key_At   ,Key_Hash ,Key_Dollar ,Key_Percent ,Key_Caret
+      ,___  ,___      ,___      ,___        ,___         ,___
    ),
 
    [NUM] = KEYMAP_STACKED
