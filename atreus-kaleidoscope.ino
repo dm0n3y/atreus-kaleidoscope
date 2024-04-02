@@ -97,10 +97,10 @@ KEYMAPS(
       ,Key_Z ,Key_X ,Key_C ,Key_V          ,Key_B         ,___
       ,___   ,___   ,___   ,LT(NUM,Escape) ,LT(NAV,Space) ,SFT_T(Tab)
 
-                     ,Key_Y             ,Key_U      ,Key_I  ,Key_O  ,Key_P
-                     ,Key_H             ,Key_J      ,Key_K  ,Key_L  ,Key_Semicolon
-       ,___          ,Key_N             ,Key_M      ,CS(0)  ,CS(1)  ,CS(2)
-       ,SFT_T(Enter) ,LT(SYM,Backspace) ,Key_Delete ,___    ,___    ,___
+                     ,Key_Y             ,Key_U          ,Key_I ,Key_O ,Key_P
+                     ,Key_H             ,Key_J          ,Key_K ,Key_L ,Key_Semicolon
+       ,___          ,Key_N             ,Key_M          ,CS(0) ,CS(1) ,CS(2)
+       ,SFT_T(Enter) ,LT(SYM,Backspace) ,LT(NAV,Delete) ,___   ,___   ,___
   ),
 
   [NAV] = KEYMAP_STACKED
