@@ -118,9 +118,9 @@ KEYMAPS(
 
   [SYM] = KEYMAP_STACKED
   (
-       ___          ,Key_Star       ,Key_Plus      ,Key_LeftCurlyBracket ,Key_RightCurlyBracket
+       ___          ,Key_Slash      ,Key_Backslash ,Key_LeftCurlyBracket ,Key_RightCurlyBracket
       ,Key_Tilde    ,Key_Underscore ,Key_Minus     ,Key_LeftParen        ,Key_RightParen
-      ,Key_Backtick ,Key_Slash      ,Key_Backslash ,Key_LeftBracket      ,Key_RightBracket  ,___
+      ,Key_Backtick ,Key_Star       ,Key_Plus      ,Key_LeftBracket      ,Key_RightBracket  ,___
       ,___          ,___            ,___           ,Key_Esc              ,Key_Space         ,Key_Tab
 
             ,Key_And  ,Key_Lt   ,Key_Eq     ,Key_Gt      ,___
