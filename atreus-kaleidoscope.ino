@@ -136,9 +136,9 @@ KEYMAPS(
       ,___    ,___    ,___    ,___    ,___ ,___
       ,___    ,___    ,___    ,___    ,___ ,___
 
-                  ,Key_Delete    ,Key_7      ,Key_8   ,Key_9  ,___
+                  ,Key_Delete    ,Key_1      ,Key_2   ,Key_3  ,___
                   ,Key_Backspace ,Key_4      ,Key_5   ,Key_6  ,___
-       ,___       ,Key_Tab       ,Key_1      ,Key_2   ,Key_3  ,___
+       ,___       ,Key_Tab       ,Key_7      ,Key_8   ,Key_9  ,___
        ,Key_Enter ,Key_0         ,Key_Period ,___     ,___    ,___
    )
 
